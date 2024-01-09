@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="sample.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>  
+
+   <div id="wrap">
+      <nav>
+         <div class="logo">
+            <img src="images/Newlogo.svg" alt="">
+         </div>
+         <button type="button" class="btn-hamburger" data-action="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+         </button>
+         <ul class="nav-menu">
+            <li class="nav-item"><a href="#">App</a></li>
+            <li class="nav-item dropdown">
+               <a href="#" data-action="dropdown-toggle">Foods</a>
+               <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item">Project 1</a>
+                  <a href="#" class="dropdown-item">Project 1</a>
+                  <a href="#" class="dropdown-item">Project 1</a>
+               </div>
+            </li>
+            <li class="nav-item"><a href="#">Faq's</a></li>
+            <li class="nav-item"><a href="#">Login</a></li>
+         </ul>
+      </nav>
+   </div>
+   
+<script>
+   let nav = document.querySelector('nav');
+   let dropdown = nav.querySelector('.dropdown');
+   let dropdownToggle = nav.querySelector("[data-action ='dropdown-toggle']");
+   let navToggle = nav.querySelector("[data-action = 'nav-toggle']");
+
+
+   
+   dropdownToggle.addEventListener('click' , () => {
+      if(dropdown.classList.contains('show')){
+         dropdown.classList.remove('show');
+      }
+      else {
+         dropdown.classList.add('show');
+      }
+   })
+   
+   navToggle.addEventListener('click' , () => {
+      if(nav.classList.contains('opened')){
+         nav.classList.remove('opened');
+      }
+      else {
+         nav.classList.add('opened');
+      }
+   })
+
+</script>
+
+
+</body>
+</html>

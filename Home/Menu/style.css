@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+  font-family: 'DK Lemon Yellow Sun';
+  src: url(Fonts/DK\ Lemon\ Yellow\ Sun.otf);
+}
+
+* { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  /* Column container */
+  .row {  
+    margin-top: 4.2em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    flex: 80%;
+    background-color: #f4f6fa;
+    padding: 20px;
+  }
+  
+  /* Main column */
+  .main {
+    flex: 20%;
+    background-color: #f4f6fa;
+    padding: 30px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .row {   
+      flex-direction: column;
+    }
+  }
+
+
+
+/* --- MAIN CONTENT --- */
+
+
+  .main h1:nth-child(1) {
+    font-family: 'DK Lemon Yellow Sun'; 
+    font-size: 40px;
+    color: #E2725A;
+  }
+
+  .main h1:nth-child(2) {
+    font-size: 15px;
+    margin: 15px 0px 20px;
+    font-weight: 600;
+  }
+
+  .main .select-tab {
+    padding: 30px;
+    margin-top: 2rem;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  }
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #364F6B;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #364F6B;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 7px;
+	left: 7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #E2725A;
+}
+
+
+/* ----ADD TO CART BTN----- */
+
+
+.learn-more {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-family: inherit;
+}
+.learn-more {
+  width: 12rem;
+  height: auto;
+}
+.learn-more .obtuse {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #E2725A;
+  border-radius: 1.625rem;
+}
+button.learn-more .obtuse .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .obtuse .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+.learn-more .obtuse .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.35rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.learn-more:hover .obtuse {
+  width: 100%;
+}
+.learn-more:hover .obtuse .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+.learn-more:hover .button-text {
+  color: #fff;
+}
+
+
+/* --- SIDE CONTENT --- */
+
+
+
+/*---Title-Pastry---*/
+
+
+#title-pastry{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin-top: 3em;
+  height: 170px;
+  color: #fff;
+  background-image: url(images/Title-pastry.png);
+  background-size: cover;
+}
+
+#title-pastry .quote {
+  text-align: right;
+  padding: 50px 40px;
+}
+#title-pastry .quote p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+/* Text repeat */
+
+Text {
+  margin-top: -2.5rem;
+  float: right;
+  text-transform: uppercase;
+  font: bold normal 7vmin/1.7 helvetica, sans-serif;
+}
+Text:not(:nth-child(3)) {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+Text:nth-child(3) {
+  color: #fff;
+}
+
+@media only screen and (max-width: 360px){
+  Text {
+    margin-top: -0.1rem;
+    font: bold normal 7vmin/1.1 helvetica, sans-serif;
+  }
+}
+
+/* --First-- */
+
+#allproduct-tab {
+  max-height: auto;
+  margin-top: 4rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  padding-bottom: 10px;
+  background: #fff;
+  margin-bottom: 2rem;
+}
+
+#allproduct-tab:before {
+  content: attr(title);
+  position: relative;
+  line-height: 20px;
+  font-size: 40px;
+  top: -13px;
+  padding: 0 6px;
+  left: 20px;
+  font-family: 'DK Lemon Yellow Sun';
+  font-weight: bold;
+  color: #E2725A;
+  background: linear-gradient(#f2f7f9, #fff);
+  border-radius: 5px;
+}
+
+.Allproduct-list {
+  margin: 20px ;
+}
+
+.Allproduct-list ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 32px;
+	margin: 0;
+	padding: 0;
+}
+
+.Allproduct-list li {
+	border: 1px solid transparent;
+	box-shadow: 0 8px 12px rgba(102,106,203,.05);
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin: 0;
+  position: relative;
+	width: 100%;
+}
+
+.Allproduct-list li .image {
+	background: #fff;
+	position: relative;
+}
+
+.Allproduct-list li .image:after {
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.Allproduct-list li .image img {
+  display: block;
+  height: auto;
+	margin: 0 auto;
+  max-width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.Allproduct-list li p {
+  align-items: center;
+	border-radius: 0 0 3px 3px;
+	color: #000;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+	height: 100%;
+	margin: 0;
+	padding: 20px 10px;
+	text-align: center;
+}
+
+.Allproduct-list li p span,.Allproduct-list li p a {
+	display: block;
+	font-size: 1.3125rem; /*21*/
+	margin-bottom: 3px;
+  text-decoration: none;
+}
+
+
+/*Active*/
+
+
+.Allproduct-list li:hover .image:after {
+	display: none;
+}   
+
+.Allproduct-list li:hover p {
+	background-image: linear-gradient(-137deg, #9FA3E7 0%, #364F6B 100%, #364F6B 100%);
+	box-shadow: 0 16px 37px 0 rgba(0,0,0,0.10), 0 44px 22px -27px rgba(102,106,203,0.15);
+	border-radius: 0 0 4px 4px;
+	color: #B4B7EF;
+	padding: 20px 10px;
+}
+
+.Allproduct-list li:hover p span,.Allproduct-list li:hover p a {
+	color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* ---Milktea Tab---- */
+
+/* Title-Milktea */
+
+#title-milktea{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin-top: 3em;
+  height: 170px;
+  color: #fff;
+  background-image: url(images/Title-milktea.png);
+  background-size: cover;
+}
+
+#title-milktea .name {
+  text-align: right;
+  padding: 15px 40px;
+}
+#title-milktea .name p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 50px;
+  font-family: 'Finger Paint';
+}
+
+/* ---Donuts Tab---- */
+
+/* Title-donuts */
+
+#title-donuts{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin-top: 3em;
+  height: 170px;
+  color: #fff;
+  background-image: url(images/Title-Donuts.png);
+  background-size: cover;
+}
+
+#title-donuts .name {
+  text-align: right;
+  padding: 30px 60px;
+}
+#title-donuts .name p {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 80px;
+  font-family: 'Acme';
+}
+
+
+/* ---Breakfast Tab--- */
+
+/* Title-breakfast */
+
+#title-breakfast{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin-top: 3em;
+  height: 170px;
+  color: #fff;
+  background-image: url(images/Title-breakfast.png);
+  background-size: cover;
+}
+
+#title-breakfast .name {
+  text-align: right;
+  padding: 40px 60px;
+}
+#title-breakfast .name p {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 50px;
+  font-family: 'Lobster';
+}
+
+/* ---Gift Boxes Second---- */
+
+#title-giftboxes{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin-top: 3em;
+  height: 170px;
+  color: #fff;
+  background-image: url(images/Title-giftbox.png);
+  background-size: cover;
+}
+
+#title-giftboxes .name {
+  text-align: right;
+  padding: 30px 40px;
+}
+#title-giftboxes .name p {
+  width: 100%;
+  height: 100%;
+  font-family: 'Road Rage';
+  font-size: 80px;
+  position: relative;
+}
+
+
+
+
+/* --- FOOTER ---- */
+
+.footer {
+  margin-top: 3rem;
+  color: #2f2f2f;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+  z-index: 5;
+}
+
+.pad {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: inherit;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+  transition: 0.2s ease;
+}
+
+.footer__btn:hover {
+  background: #E2725A;
+  color: #fff;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+  color: #E2725A;
+}
+
+.footer li a:hover {
+  text-decoration: underline;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+	flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+  padding: 1px 30px;
+  background: #364a62;
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: red;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

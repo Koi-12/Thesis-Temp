@@ -1,0 +1,224 @@
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, max-content);
+    grid-gap: 1rem 1rem;
+    font-family: helvetica, arial, sans-serif;
+  /*   font-size: 16px; */
+    font-size: .95vw;
+    font-weight: bold;
+    margin: 2rem;
+  }
+  
+  .main-content .sit_baseline {
+    height: 12.6vw;
+  }
+  
+  .main-content  h1 {
+  /*   font-size: 16rem; */
+    font-size: 15vw;
+    text-align: center;
+  }
+  
+  .main-content header h1 {
+  /*   font-size: 3rem; */
+    font-size: 2.85vw;
+    text-align: left;
+  }
+  
+  .main-content img {
+    max-width: 100%;
+  }
+  
+  .main-content header {
+    grid-area: 1/ 5 / 2 / 7;
+  }
+  
+  .main-content .title1 {
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: start;
+  }
+  
+  .main-content .img1 {
+    grid-area: 1 / 2 / 3 / 4;
+  }
+  
+  .main-content .title2 {
+    grid-area: 2 / 4 / 3 / 5;
+    align-self: end;
+  }
+  
+  .main-content .img2 {
+    grid-area: 2 / 5 / 3 / 6;
+  }
+  
+  .main-content .img3 {
+      grid-area: 3 / 1 / 5 / 3;
+  }
+  
+  .main-content .img4 {
+    grid-area: 3 / 3 / 5 / 5;
+  }
+  
+  .main-content .img5 {
+    grid-area: 3 / 5 / 4 / 6;
+  }
+  
+  .main-content .title3 {
+    grid-area: 5 / 1 / 6 / 5;
+  }
+  
+  .main-content .img6 {
+    grid-area: 4 / 5 / 6 / 7;
+  }
+  
+  .main-content .title4 {
+    grid-area: 6 / 1 / 8 / 2;
+  }
+  
+  .main-content .img7 {
+    grid-area: 6 / 2 / 8 / 4;
+  }
+  
+  .main-content .img8 {
+    grid-area: 6 / 4 / 7 / 5;
+  }
+  
+  .main-content .img9 {
+    grid-area: 7 / 4 / 8 / 5;
+  }
+  
+  .main-content p {
+    grid-area: 6 / 5 / 8 / 7;
+    width: 60%;
+    line-height: 1.65;
+    align-self: end;
+  }
+  
+  .main-content .img10 {
+    grid-area: 8 / 2 / 9 / 3;
+  }
+  
+  .main-content .title5 {
+    grid-area: 8 / 4 / 9 / 5;
+    align-self: end;
+  }
+  
+  .main-content address {
+    grid-area: 9 / 5 / 10 / 6;
+    align-self: end;
+    line-height: 1.4;
+  }
+  
+  @media (max-width: 1080px) {
+    .main-content  {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .main-content header {
+    grid-area: 1/ 4 / 2 / 6;
+    }
+    
+    .main-content .title2 {
+      grid-area: 2 / 4 / 3 / 5;
+      align-self: end;
+    }
+  
+    .main-content .img2 {
+      grid-area: 2 / 4 / 3 / 5;
+    }
+    
+    .main-content .img4 {
+      grid-area: 3 / 3 / 4 / 4;
+    }
+    
+    .main-content .title2  {
+      grid-area: 3 / 4 / 4 / 5;
+    }
+    
+    .main-content .img5 {
+      grid-area: 4 / 3 / 5 / 4;
+    }
+    
+    .main-content .img6 {
+      grid-area: 4 / 4 / 6 / 6;
+    }
+    
+    .main-content.title3 {
+      grid-area: 5 / 1 / 6 / 3;
+    }
+    
+    .main-content .title4 {
+      grid-area: 6 / 4 / 7 / 5;
+    }
+    
+    .main-content .img8 {
+      grid-area: 6 / 1 / 7 / 2;
+    }
+    
+    .main-content p {
+      columns: 3;
+      column-gap: 8px;
+      grid-area: 9 / 1 / 10 / 7;
+    }
+    .main-content address,.main-content p {
+      font-size: .7rem;
+    }
+    
+  }
+  
+  @media (max-width: 880px) {
+    .main-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .main-content p {
+      columns: 1;
+      column-gap: 0;
+      font-size: 16px;
+    }
+    
+    .main-content header {
+    }
+    
+    .main-content .title1 {
+      order: 1;
+    }
+    
+    .main-content .title2 {
+      order: 2;
+    }
+    
+    .main-content .img1,.main-content .img2 {
+      order: 3;
+    }
+    
+    .main-content .title3,.main-content .title4 {
+      order: 5;
+    }
+    
+    .main-content.title2,.main-content .img3,.main-content .img4 {
+      order: 4;
+    }
+    
+    .main-content .img5,.main-content .img6 {
+      order: 6;
+    }
+    
+    .main-content .title5 {
+      order: 7
+    }
+    
+    .main-content .img8,.main-content .img9,.main-content .img10 {
+      order: 8;
+    }
+    
+    .main-content p, .main-content  address {
+      order: 9;
+    }
+  }
+
+
+
+
+  .main-content h1, .main-content .sit_baseline h1, .main-content hgroup, .main-content address, .main-content p, .main-content header, .main-content img, .main-content p{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}.main-content header, .main-content hgroup{display:block}.main-content{line-height:1}

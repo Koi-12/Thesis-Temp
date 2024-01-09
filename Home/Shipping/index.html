@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="icon" href="images/bun1.ico">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUNappetite</title>
+</head>
+<body>
+    
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="../index.html"><img src="images/newlogo.png" alt="bunappetite"></a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"><img src="images/newlogo.png" alt="bunappetite"></span>
+          <i class="fas fa-times fa-xs"></i>
+        </div>
+        <ul class="links">
+          <li class="-active"><a href="../App/index.html">App</a></li>
+          <li>
+            <a href="../index.html">Offers</a>
+          </li>
+          <li>
+            <a href="../Menu/index.html">Menu</a>
+          </li>
+          <li><a href="../FAQ's/index.html">FAQ's</a></li>
+          <li><a href="../User Info/index.html">My account</a></li>
+        </ul>
+      </div>
+      <div class="search-box">
+        <a href="../Cart/index.html"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </nav>
+
+      <div class="row">
+        
+        <div class="main">
+
+          <div class="wb">
+            <h1>It's greate to see you again - Let's get your delivery sorted...</h1>
+          </div>
+          
+            <h1>shipping address</h1>
+
+
+            <form>
+                <div class="first">
+                    <div class="field">
+                        <input type="text" required autocomplete="off" id="text" name="fname">
+                        <label for="fname" title="First Name" data-title="First Name"></label>
+                    </div>
+                    <div class="field">
+                        <input type="text" required autocomplete="off" id="text" name="lname">
+                        <label for="lname" title="Last Name" data-title="Last Name"></label>
+                    </div>
+                </div>
+                <div class="field">
+                    <input type="address" required autocomplete="off" id="address" name="address1">
+                    <label for="address1" title="Address 1" data-title="Address 1"></label>
+                    <p>Street name and number</p>
+                </div>
+                <div class="field">
+                    <input type="address" required autocomplete="off" id="address" name="address2">
+                    <label for="address2" title="Address 2" data-title="Address 2"></label>
+                    <p>Additional address information</p>
+                </div>
+                <div class="field">
+                    <input type="address" required autocomplete="off" id="address" name="Barangay">
+                    <label for="Barangay" title="Barangay" data-title="Barangay"></label>
+                    <p>Barangay information</p>
+                </div>
+                
+
+            </form>
+
+
+            <section class="getorder">
+
+              <div class="your">
+                <h1>Get your order</h1>
+
+                <div id="app">
+                  <button ref="button" class="toggle-button" @click="showPopup = !showPopup">
+                    ?
+                  </button>
+                  <!-- <div v-show="showPopup" v-closable="{exclude: ['button'],handler: 'onClose'}"class="popup-box">
+                    <span> Delivery time: </span> It will take 7 business days ship out your order for delivery. Depending on your delivery address, it will take another 5 to 15 business days for our carrier to deliver the parcel to you. Please refer to Delivery Time  
+                  </div> -->
+                </div>
+                
+              </div>
+             
+              <div class="get"> 
+                <h1>NOTE: Make sure you've input the right information above, So that we could delivery properly.</h1>
+              </div>
+
+              <div class="standard">
+                
+                <div class="h-p">
+                  <h1>Standart Delivery</h1>
+                  <p>$10.00</p>
+                </div>
+
+                <div class="p-i">
+                  <img src="images/motor.svg" alt="delivery">
+                  <p>Cash on delivery(It will take 7 business days ship out your order for delivery. Depending on your delivery address, it will take another 5 to 15 business days for our carrier to deliver the parcel to you.)</p>
+                </div>
+              </div>
+              
+              <form class="email">
+                <p><span>Email: </span>e*********@gmail.com</p>
+              </form>
+
+              <form class="checkbox">
+
+                <label class="control control--checkbox">My billing and delivery information are the same
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+                </label>
+
+                <label class="control control2 control--checkbox">I'm 18+ years old.
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+                </label>
+
+              </form>
+
+              <div class="terms">
+                <h1>By clicking the "Checkbox" above. You agree on the <a href="#">terms and conditions</a> of this site.</h1>
+              </div>
+
+              <div class="checkout"> 
+                <a href="#">Finish order</a>
+                <a href="#"><i class="fas fa-long-arrow-alt-right fa-lg"></i></a>
+              </div>
+
+
+            </section>
+
+
+        </div>
+
+        <div class="side">
+
+          <section class="order">
+
+
+            <div class="summary">
+              <h1>ORDER SUMMARY</h1>
+              <div class="total-summary">
+                <div class="one">
+                  <p>1 ITEM</p>
+                  <p>$80.00</p>
+                </div>
+                <div class="two">
+                  <p>DELIVERY</p>
+                  <p>$10.00</p>
+                </div>
+                <div class="three">
+                  <p>TOTAL</p>
+                  <p>$100.00</p>
+                </div>
+                <div class="four">
+                  <p>[Item total Amount]</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="method">
+              <h1>accepted payment method</h1>
+              <div class="delivery">
+                <img src="images/delivery.svg" alt="delivery">
+                <p>cash on delivery</p>
+              </div>
+            </div>
+            
+
+            <form>
+
+              <div class="order-details">
+                
+              </div>
+
+            </form>
+
+          </section>
+
+      </div>
+
+      </div>
+
+      <footer class="filter">
+        <div class="pad">
+        <div class="filter__addr">
+          <h1 class="filter__logo">Bunappetite</h1>
+              
+          <h2>Contact</h2>
+          
+          <address>
+            2238 Juan Luna St. Gagalangin, Tondo Manila, Philippines<br>
+                
+            <a class="filter__btn" href="mailto:example@gmail.com">Follow Us</a>
+          </address>
+        </div>
+        
+        <ul class="filter__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">Media</h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Online</a>
+              </li>
+      
+              <li>
+                <a href="#">Print</a>
+              </li>
+                  
+              <li>
+                <a href="#">Alternative Ads</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item nav__item--extra">
+            <h2 class="nav__title">Technology</h2>
+            
+            <ul class="nav__ul nav__ul--extra">
+              <li>
+                <a href="#">Hardware Design</a>
+              </li>
+              
+              <li>
+                <a href="#">Software Design</a>
+              </li>
+              
+              <li>
+                <a href="#">Digital Signage</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <h2 class="nav__title">Social Media's</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Facebook</a>
+              </li>
+              
+              <li>
+                <a href="#">Gmail</a>
+              </li>
+              
+              <li>
+                <a href="#">Instagram</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+        
+        <div class="legal">
+          <p>&copy; 2019 BUNappetite. All rights reserved.</p>
+          
+          <div class="legal__links">
+            <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+          </div>
+        </div>
+      </footer>
+
+    <script src="Nvar.js"></script>
+    <script src="popupbox.js"></script>
+    <script src="Vue.js"></script>
+    <script src="Jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+</body>
+</html>

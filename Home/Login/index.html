@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/bun1.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUNappetite</title>
+</head>
+<body>
+
+    <div class="split-screen">
+        <div class="left">
+            <section class="copy">
+                <h1>BUNappetite</h1>
+                <p>Bakeshop & Cafe</p>
+            </section>
+        </div>
+        <div class="right">
+            <form class="log-in">
+                <section clasfs="copy">
+                    <h2>Login an Account</h2>
+                </section>
+                <div class="input-container email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-container password">
+                    <label for="pwd">Password</label>
+                    <input type="password" name="password" id="pwd" placeholder="Password" />
+                    <i class="fa fa-eye-slash showpwd" onClick="showPwd('pwd', this)"></i>
+                </div>
+                <!-- <p class="fgot"><a href="#">Forget password?
+                </a></p> -->
+            
+                <button class="login-btn" type="submit"><a href="../index.html" style="text-decoration:none; color:#fff;">Sign-in</a> </button>
+                <div class="login-container">
+                    <p><a href="#" id="sign-up"><Strong>Create an Account</Strong></a></p>
+                </div>
+                <!-- <div class="choice">
+                    <span></span><p>or</p> <span></span>
+                </div> -->
+
+                <!-- <button class="facebook-btn" type="submit">
+                    <a href="#" class="fb btn">
+                        <i class="fab fa-facebook-f"></i> Login with Facebook
+                    </a>
+                </button>
+                <button class="google-btn" type="submit">
+                    <a href="#" class="g btn">
+                        <i class="fab fa-google fa-1x"></i> Login with Google  
+                    </a>
+                </button> -->
+
+            </form>
+            <form class="sign-up">
+                <section class="copy">
+                    <h2>Create an Account</h2>
+                </section>
+                <div class="input-container fname">
+                    <label for="fname">Fullname</label>
+                    <input type="text" id="fname" name="fname" placeholder="Fname/Lname/MI" required>
+                </div>
+                <div class="input-container password">
+                    <label for="passwd">Password</label>
+                    <input type="password" name="password" id="passwd" placeholder="Password" />
+                    <i class="fa fa-eye-slash showpwd" onClick="showPwd('passwd', this)"></i>
+                </div>
+                <div class="input-container email">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-container number">
+                    <label for="number">Contanct Number</label>
+                    <input type="number" id="number" name="number" maxLength="11" placeholder="e.g. +(63)xxx xxx xxxx" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                </div>
+                
+            
+                <button class="login-btn" type="submit"><a href="../index.html" style="text-decoration: none; color: #fff;">Sign-up</a></button>
+                <div class="login-container">
+                    <p><a href="#" id="log-in"><Strong>Already have an account?</Strong></a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="Jquery.js"></script>
+    <script src="toggle.js"></script> 
+    <script src="toggle-password.js"></script>    
+</body>
+</html>

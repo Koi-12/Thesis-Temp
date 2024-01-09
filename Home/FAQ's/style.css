@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap');
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.faqs {
+  margin-top: 4.1em;
+  color: #555;
+  text-align: center;
+  font-family: "Poppins";
+  padding: 20px;
+}
+
+h1{
+  font-size: 2.2em;
+  color: #000;
+
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.flip {
+  margin: 20px;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.flip > .front,
+.flip > .back {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+.flip > .front {
+  transform: rotateY(0deg);
+}
+.flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+.flip:hover > .front {
+  transform: rotateY(180deg);
+}
+.flip:hover > .back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.flip.flip-vertical > .back {
+  transform: rotateX(-180deg);
+}
+.flip.flip-vertical:hover > .front {
+  transform: rotateX(180deg);
+}
+.flip.flip-vertical:hover > .back {
+  transform: rotateX(0deg);
+}
+
+.flip {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  width: 400px;
+}
+.flip > .front,
+.flip > .back {
+  display: block;
+  color: #000;
+  width: inherit;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 400px;
+  padding: 1em 2em;
+  background: #fff;
+  border-radius: 10px;
+}
+.flip > .back {
+    background-color: #364F6B;
+    color: #E2725A;
+}
+.flip > .front p,
+.flip > .back p {
+  font-size: 0.9125rem;
+  line-height: 160%;
+  color: #fff;
+}
+
+.flip > .front .text-shadow {
+    
+}
+
+.flip > .back ol {
+    padding: 0 10px 0 20px ;
+    text-align: justify;
+    color: #fff;
+    position: sticky;
+    font-size: 14px;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 6px;
+} 
+::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  */
+  display: none;
+} 
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 10px rgb(104, 103, 103); 
+  border-radius: 5px;
+}
+
+
+  
+.filter {
+    margin-top: 3rem;
+    color: #2f2f2f;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .pad {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+  }
+  
+  .filter > * {
+    flex:  1 100%;
+  }
+  
+  .filter__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .filter__logo {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    text-transform: inherit;
+    font-size: 1.5rem;
+  }
+  
+  .filter__addr h2 {
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .nav__title {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+  .filter address {
+    font-style: normal;
+    color: #999;
+  }
+  
+  .filter__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2f2f2f;
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0 1.3em;
+    transition: 0.2s ease;
+  }
+  
+  .filter__btn:hover {
+    background: #E2725A;
+    color: #fff;
+  }
+  
+  .filter ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .filter li {
+    line-height: 2em;
+    color: #E2725A;
+  }
+  
+  .filter li a:hover {
+    text-decoration: underline;
+  }
+  
+  .filter a {
+    text-decoration: none;
+  }
+  
+  .filter__nav {
+    display: flex;
+      flex-flow: row wrap;
+  }
+  
+  .filter__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+  }
+  
+  .nav__ul a {
+    color: #999;
+  }
+  
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+    padding: 1px 30px;
+    background: #364a62;
+  }
+    
+  .legal__links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .heart {
+    color: red;
+  }
+  
+  @media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+      margin-left: auto;
+    }
+  }
+  
+  @media screen and (min-width: 40.375em) {
+    .filter__nav > * {
+      flex: 1;
+    }
+    
+    .nav__item--extra {
+      flex-grow: 2;
+    }
+    
+    .filter__addr {
+      flex: 1 0px;
+    }
+    
+    .filter__nav {
+      flex: 2 0px;
+    }
+  }
